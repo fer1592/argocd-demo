@@ -1,0 +1,5 @@
+nameOverride: "prometheus-test"
+prometheus:
+  service:
+    annotations:
+      testAnnotation: "test"
