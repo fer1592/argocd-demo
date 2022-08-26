@@ -11,8 +11,12 @@ spec:
     targetRevision: "39.9.0"
     helm:
       releaseName: prometheus
-      valueFiles:
-        - dev/values.yaml
+      value: |
+        nameOverride: "prometheus-test"
+        prometheus:
+          service:
+            annotations:
+              testAnnotation: "test"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: prometheus
