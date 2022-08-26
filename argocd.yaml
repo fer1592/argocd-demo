@@ -69,9 +69,9 @@ server:
   additionalApplications:
     - name: common
       namespace: argocd
-      project: demo
+      project: default
       source:
-        repoURL: https://github.com/fer1592/argocd-demo.git
+        repoURL: git@github.com:fer1592/argocd-demo.git
         targetRevision: 'main'
         path: common
         directory:
@@ -84,9 +84,9 @@ server:
           selfHeal: true
     - name: dev
       namespace: argocd
-      project: demo
+      project: default
       source:
-        repoURL: https://github.com/fer1592/argocd-demo.git
+        repoURL: git@github.com:fer1592/argocd-demo.git
         targetRevision: 'main'
         path: dev
         directory:
