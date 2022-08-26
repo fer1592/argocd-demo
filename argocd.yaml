@@ -71,7 +71,7 @@ server:
       namespace: argocd
       project: default
       source:
-        repoURL: git@github.com:fer1592/argocd-demo.git
+        repoURL: https://github.com/fer1592/argocd-demo.git
         targetRevision: 'main'
         path: common
         directory:
@@ -86,7 +86,7 @@ server:
       namespace: argocd
       project: default
       source:
-        repoURL: git@github.com:fer1592/argocd-demo.git
+        repoURL: https://github.com/fer1592/argocd-demo.git
         targetRevision: 'main'
         path: dev
         directory:
