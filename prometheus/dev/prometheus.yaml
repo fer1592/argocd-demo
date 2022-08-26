@@ -20,3 +20,7 @@ spec:
   destination:
     server: "https://kubernetes.default.svc"
     namespace: prometheus
+  syncOptions:
+    - ApplyOutOfSyncOnly=true
+    - Replace=true
+    - PruneLast=true
