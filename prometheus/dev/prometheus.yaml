@@ -11,7 +11,7 @@ spec:
     targetRevision: "39.9.0"
     helm:
       releaseName: prometheus
-      value: |
+      values: |
         nameOverride: "prometheus-test"
         prometheus:
           service:
