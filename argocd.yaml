@@ -67,6 +67,21 @@ server:
     url: https://argocd.example.com
 
   additionalApplications:
+    - name: common
+      namespace: argocd
+      project: default
+      source:
+        repoURL: https://github.com/fer1592/argocd-demo.git
+        targetRevision: 'main'
+        path: common
+        directory:
+          recurse: true
+      destination:
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
     - name: prometheus
       namespace: argocd
       project: default
