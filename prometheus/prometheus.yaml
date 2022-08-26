@@ -21,7 +21,7 @@ spec:
     helm:
       releaseName: prometheus
       valueFiles:
-        - ../../dev/prometheus/values.yaml
+        - dev/values.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: prometheus
