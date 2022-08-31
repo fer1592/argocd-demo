@@ -112,3 +112,17 @@ server:
         automated:
           prune: true
           selfHeal: true
+    - name: mysql
+      namespace: argocd
+      project: default
+      source:
+        repoURL: https://charts.bitnami.com/bitnami
+        chart: mysql
+        targetRevision: "9.3.0"
+      destination:
+        server: "https://kubernetes.default.svc"
+        namespace: mysql
+      helm:
+        releaseName: mysql
+        values: |
+          nameOverride: "mysql-dev"
