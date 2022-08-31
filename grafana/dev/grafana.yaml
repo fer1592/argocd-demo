@@ -26,8 +26,3 @@ spec:
   destination:
     server: "https://kubernetes.default.svc"
     namespace: grafana
-  syncPolicy:
-    syncOptions:
-      - ApplyOutOfSyncOnly=true
-      - Replace=true
-      - PruneLast=true
